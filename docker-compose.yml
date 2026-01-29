@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # ===== MySQL Database =====
+  db:
+    image: mysql:8.0
+    container_name: moulinette-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-sibmlab@1014}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-moulinette_db}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3307:3306" # External port 3307 to avoid conflict with local MySQL
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-sibmlab@1014}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - moulinette-network
+
+  # ===== FastAPI Backend =====
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: moulinette-backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: mysql+pymysql://root:${MYSQL_ROOT_PASSWORD:-sibmlab@1014}@db:3306/${MYSQL_DATABASE:-moulinette_db}
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - moulinette-network
+
+  # ===== React Frontend (Nginx) =====
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: moulinette-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - moulinette-network
+
+# ===== Volumes =====
+volumes:
+  mysql_data:
+    driver: local
+
+# ===== Networks =====
+networks:
+  moulinette-network:
+    driver: bridge
