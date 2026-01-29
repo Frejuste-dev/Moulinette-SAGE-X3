@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="frontend/public/logo.png" alt="Logo" width="40" style="vertical-align: middle;"/> Moulinette SAGE X3
+  <img src="frontend/public/logo.png" alt="Logo" width="40" style="vertical-align: middle;"/>Moulinette SAGE X3
 </h1>
 
 > Application de traitement automatisé des inventaires pour l'import dans Sage X3
@@ -328,4 +328,5 @@ Développé dans le cadre d'un projet de **Licence Professionnelle en Génie Log
 <p align="center">
   <img src="https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge" alt="Made with Love"/>
 </p>
+
 
