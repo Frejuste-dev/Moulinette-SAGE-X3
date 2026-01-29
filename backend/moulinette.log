@@ -1,0 +1,164 @@
+2026-01-18 19:14:28,781 - main - INFO - Initializing database tables...
+2026-01-18 19:17:08,710 - router - INFO - Processing mask upload: non-conforme.csv (1440 bytes)
+2026-01-18 19:19:03,861 - router - INFO - Processing filled template upload for session 42: 42_ABJ012507INV00000004_ABJ01_TEMPLATE.xlsx
+2026-01-18 20:08:41,858 - main - INFO - Initializing database tables...
+2026-01-18 20:08:57,745 - main - INFO - Initializing database tables...
+2026-01-18 20:13:41,900 - main - INFO - Initializing database tables...
+2026-01-18 20:27:03,271 - main - INFO - Initializing database tables...
+2026-01-18 20:35:52,111 - router - INFO - Processing mask upload: non-conforme.csv (1440 bytes)
+2026-01-18 20:35:52,414 - router - INFO - Extracted metadata: {'sessionNUM': 'ABJ012507SES00000003', 'inventoryNUM': 'ABJ012507INV00000004', 'site': 'ABJ01'}
+2026-01-18 20:38:55,169 - main - INFO - Initializing database tables...
+2026-01-18 20:39:15,415 - router - INFO - Processing mask upload: test.csv (135 bytes)
+2026-01-18 20:39:15,474 - router - ERROR - CSV parsing failed: Error tokenizing data. C error: Expected 4 fields in line 3, saw 15
+Traceback (most recent call last):
+  File "C:\Users\SINFORMATIQUE\OneDrive - SIBM\Documents\Dev\Moulinette\backend\router.py", line 129, in upload_mask
+    df_mask = pd.read_csv(io.BytesIO(content), sep=';', header=None, dtype=str)
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        nrows
+        ^^^^^
+    )
+    ^
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 4 fields in line 3, saw 15
+
+2026-01-18 20:39:49,735 - router - INFO - Processing mask upload: test.csv (117 bytes)
+2026-01-18 20:39:49,737 - router - ERROR - CSV parsing failed: Error tokenizing data. C error: Expected 3 fields in line 3, saw 15
+Traceback (most recent call last):
+  File "C:\Users\SINFORMATIQUE\OneDrive - SIBM\Documents\Dev\Moulinette\backend\router.py", line 129, in upload_mask
+    df_mask = pd.read_csv(io.BytesIO(content), sep=';', header=None, dtype=str)
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\readers.py", line 626, in _read
+    return parser.read(nrows)
+           ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        nrows
+        ^^^^^
+    )
+    ^
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 3 fields in line 3, saw 15
+
+2026-01-18 20:40:22,218 - main - INFO - Initializing database tables...
+2026-01-18 20:40:22,237 - main - INFO - Initializing database tables...
+2026-01-18 20:42:49,057 - router - INFO - Processing mask upload: non-conforme.csv (1440 bytes)
+2026-01-18 20:42:49,317 - router - INFO - Extracted metadata: {'sessionNUM': 'ABJ012507SES00000003', 'inventoryNUM': 'ABJ012507INV00000004', 'site': 'ABJ01'}
+2026-01-18 20:43:22,513 - main - INFO - Initializing database tables...
+2026-01-18 20:43:44,554 - router - INFO - Processing mask upload: non-conforme.csv (1440 bytes)
+2026-01-18 20:43:44,596 - router - INFO - Extracted metadata: {'sessionNUM': 'ABJ012507SES00000003', 'inventoryNUM': 'ABJ012507INV00000004', 'site': 'ABJ01'}
+2026-01-18 20:45:03,302 - main - INFO - Initializing database tables...
+2026-01-18 20:45:30,850 - main - INFO - Initializing database tables...
+2026-01-18 20:45:35,287 - main - INFO - Initializing database tables...
+2026-01-18 20:45:55,029 - main - INFO - Initializing database tables...
+2026-01-18 20:46:33,705 - router - INFO - Processing mask upload: non-conforme.csv (1440 bytes)
+2026-01-18 20:46:33,864 - router - INFO - Extracted metadata: {'sessionNUM': 'ABJ012507SES00000003', 'inventoryNUM': 'ABJ012507INV00000004', 'site': 'ABJ01'}
+2026-01-18 20:57:02,047 - main - INFO - Initializing database tables...
+2026-01-18 20:58:00,439 - main - INFO - Initializing database tables...
+2026-01-18 21:00:33,049 - router - INFO - Processing mask upload: non-conforme.csv (1440 bytes)
+2026-01-18 21:00:33,263 - router - INFO - Extracted metadata: {'sessionNUM': 'ABJ012507SES00000003', 'inventoryNUM': 'ABJ012507INV00000004', 'site': 'ABJ01'}
+2026-01-18 21:08:36,149 - main - INFO - Initializing database tables...
+2026-01-18 21:08:57,349 - router - INFO - Processing mask upload: non-conforme.csv (1440 bytes)
+2026-01-18 21:08:57,377 - router - INFO - Extracted metadata: {'sessionNUM': 'ABJ012507SES00000003', 'inventoryNUM': 'ABJ012507INV00000004', 'site': 'ABJ01'}
+2026-01-18 21:08:57,829 - router - INFO - Session 1 created with inventory 1
+2026-01-18 21:12:47,112 - router - INFO - Processing mask upload: non-conforme.csv (1440 bytes)
+2026-01-18 21:12:47,296 - router - INFO - Extracted metadata: {'sessionNUM': 'ABJ012507SES00000003', 'inventoryNUM': 'ABJ012507INV00000004', 'site': 'ABJ01'}
+2026-01-18 21:12:47,766 - router - INFO - Session 2 created with inventory 2
+2026-01-18 21:16:55,234 - router - INFO - Processing filled template for session 2: 2_ABJ012507INV00000004_ABJ01_TEMPLATE.xlsx
+2026-01-18 21:16:58,079 - router - WARNING - Missing required columns: ['INVENTAIRE', 'ARTICLE']
+2026-01-18 21:19:06,016 - main - INFO - Initializing database tables...
+2026-01-18 21:20:49,672 - main - INFO - Initializing database tables...
+2026-01-18 21:22:21,343 - main - INFO - Initializing database tables...
+2026-01-18 21:22:51,141 - router - INFO - Resuming session 2 at step 3
+2026-01-18 21:23:03,142 - router - INFO - Processing filled template for session 2: 2_ABJ012507INV00000004_ABJ01_TEMPLATE.xlsx
+2026-01-18 21:24:28,150 - main - INFO - Initializing database tables...
+2026-01-18 21:25:01,079 - router - INFO - Resuming session 2 at step 3
+2026-01-18 21:25:16,645 - router - INFO - Processing filled template for session 2: 2_ABJ012507INV00000004_ABJ01_TEMPLATE.xlsx
+2026-01-18 21:25:17,915 - router - INFO - Final file generated for session 2
+2026-01-18 21:26:46,094 - main - INFO - Initializing database tables...
+2026-01-19 15:58:54,336 - main - INFO - Initializing database tables...
+2026-01-19 16:36:51,753 - router - INFO - Processing mask upload: Conforme.csv (491230 bytes)
+2026-01-19 16:36:52,116 - router - INFO - Extracted metadata: {'sessionNUM': 'ABJ012507SES00000003', 'inventoryNUM': 'ABJ012507INV00000004', 'site': 'ABJ01'}
+2026-01-19 16:36:54,027 - router - INFO - Session 3 created with inventory 3
+2026-01-19 16:47:32,500 - router - INFO - Resuming session 3 at step 3
+2026-01-19 16:50:21,781 - router - INFO - Resuming session 1 at step 3
+2026-01-19 16:50:50,033 - router - INFO - Resuming session 1 at step 3
+2026-01-19 16:51:05,834 - router - INFO - Resuming session 3 at step 3
+2026-01-19 18:54:09,783 - main - INFO - Initializing database tables...
+2026-01-19 18:57:11,318 - router - INFO - Resuming session 3 at step 3
+2026-01-19 18:59:04,998 - router - INFO - Processing filled template for session 3: inventaire_rempli.xlsx
+2026-01-19 18:59:12,528 - router - ERROR - Excel parsing failed: File is not a zip file
+Traceback (most recent call last):
+  File "C:\Users\SINFORMATIQUE\OneDrive - SIBM\Documents\Dev\Moulinette\backend\router.py", line 300, in upload_filled_template
+    df = pd.read_excel(io.BytesIO(content), engine='openpyxl')
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\excel\_base.py", line 495, in read_excel
+    io = ExcelFile(
+        io,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\excel\_base.py", line 1567, in __init__
+    self._reader = self._engines[engine](
+                   ~~~~~~~~~~~~~~~~~~~~~^
+        self._io,
+        ^^^^^^^^^
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        engine_kwargs=engine_kwargs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\excel\_openpyxl.py", line 553, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        filepath_or_buffer,
+        ^^^^^^^^^^^^^^^^^^^
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        engine_kwargs=engine_kwargs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\excel\_base.py", line 573, in __init__
+    self.book = self.load_workbook(self.handles.handle, engine_kwargs)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\pandas\io\excel\_openpyxl.py", line 572, in load_workbook
+    return load_workbook(
+        filepath_or_buffer,
+        **(default_kwargs | engine_kwargs),
+    )
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\openpyxl\reader\excel.py", line 346, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+                         data_only, keep_links, rich_text)
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\SINFORMATIQUE\AppData\Roaming\Python\Python314\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "C:\Python314\Lib\zipfile\__init__.py", line 1458, in __init__
+    self._RealGetContents()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\zipfile\__init__.py", line 1525, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+2026-01-19 19:00:12,227 - router - INFO - Resuming session 3 at step 3
