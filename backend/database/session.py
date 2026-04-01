@@ -7,7 +7,7 @@ import os
 # Format : mysql+pymysql://user:password@host:port/dbname
 MYSQL_URL = os.getenv(
     "DATABASE_URL", 
-    "mysql+pymysql://root:sibmlab%401014@localhost:3306/moulinette_db"
+    "mysql+pymysql://root:sibmlab%401014@127.0.0.1:3306/moulinette_db"
 )
 
 # 1. L'Engine : Il gère la connexion réelle à la base de données.
@@ -16,7 +16,8 @@ MYSQL_URL = os.getenv(
 engine = create_engine(
     MYSQL_URL, 
     pool_pre_ping=True,
-    pool_recycle=3600
+    pool_recycle=3600,
+    connect_args={"connect_timeout": 10}
 )
 
 # 2. SessionLocal : Une factory pour créer des sessions de base de données.
