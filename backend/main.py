@@ -20,9 +20,15 @@ from router import router as inventory_router
 
 # 1. Initialisation de la base de données
 logger.info("Initializing database tables...")
-# Cette ligne crée automatiquement les tables dans MySQL au démarrage 
-# si elles n'existent pas encore (InventorySession, InventoryFile, etc.)
-models.Base.metadata.create_all(bind=engine)
+try:
+    # Cette ligne crée automatiquement les tables dans MySQL au démarrage 
+    # si elles n'existent pas encore (InventorySession, InventoryFile, etc.)
+    models.Base.metadata.create_all(bind=engine)
+    logger.info("Database tables initialized successfully.")
+except Exception as e:
+    logger.error(f"Failed to initialize database tables: {e}")
+    # On continue quand même pour permettre au serveur de démarrer (mode survie)
+    # Les erreurs se produiront lors des appels aux routes si la DB est vraiment HS.
 
 # 2. Création de l'application FastAPI
 app = FastAPI(
